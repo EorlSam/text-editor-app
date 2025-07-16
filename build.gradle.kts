@@ -16,9 +16,8 @@ repositories {
 val junitVersion = "5.10.2"
 
 java {
-    toolchain {
-        languageVersion = JavaLanguageVersion.of(24)
-    }
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 tasks.withType<JavaCompile> {
@@ -27,7 +26,7 @@ tasks.withType<JavaCompile> {
 
 application {
     mainModule.set("com.github.eorlsam.texteditorapp")
-    mainClass.set("com.github.eorlsam.texteditorapp.HelloApplication")
+    mainClass.set("com.github.eorlsam.texteditorapp.MainApp")
 }
 
 javafx {
